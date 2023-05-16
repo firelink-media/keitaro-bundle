@@ -1,0 +1,23 @@
+{
+    "name": "common-bundles/tds-provider-bundle",
+    "type": "symfony-bundle",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Nazar Hnatyshen",
+            "email": "n.gnatyshen@firelink.media"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dependency-injection": "^5.1",
+        "symfony/config": "^5.1",
+        "symfony/http-foundation": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "TdsProviderBundle\\": "src/TdsProviderBundle"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+parameters:
+  env(TDS_DOMAIN): null
+  env(TDS_API_URL): 'api.google.com'
+  env(TDS_API_KEY): 'qwe123key'
+
+  tdsDomain: '%env(TDS_DOMAIN)%'
+  tdsApiUrl: '%env(TDS_API_URL)%'
+  tdsApiKey: '%env(TDS_API_KEY)%'
+
+services:
+  TdsProviderBundle\Provider\TdsProvider:
+    arguments:
+      $apiUrl: '%tdsApiUrl%'
+      $apiKey: '%tdsApiKey%'
+      $domain: '%tdsDomain%'
