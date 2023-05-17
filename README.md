@@ -11,5 +11,5 @@
 3. If you want to apply `LandingPageCookieSetterSubscriber` to set first user's url on site to `landing_page` cookie, you must add next part of code to your project `config/services.yaml`:
 ```yaml
 TdsProviderBundle\EventSubscriber\LandingPageCookieSetterSubscriber:
-    tags: [ { name: kernel.event_listener} ]
+    tags: [ { name: 'kernel.event_listener' } ]
 ```
