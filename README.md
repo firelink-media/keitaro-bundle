@@ -2,7 +2,7 @@
 
 ### How to install
 
-1. `composer require common-bundles/tds-provider-bundle`
+1. `composer require firelink-media/tds-provider-bundle`
 2. ensure you project has access to next env vars:
     * `SLACK_URL` - channel for tds related errors 
     * `TDS_DOMAIN` - domain which we want to connect to TDS. If set to `null`, domain will be taken from request.
