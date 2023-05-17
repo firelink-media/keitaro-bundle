@@ -9,6 +9,7 @@
     * `TDS_API_URL` - api url of TDS
     * `TDS_API_KEY` - TDS api key
 3. If you want to apply `LandingPageCookieSetterSubscriber` to set first user's url on site to `landing_page` cookie, you must add next part of code to your project `service.yml`:
-  `TdsProviderBundle\EventSubscriber\LandingPageCookieSetterSubscriber:
-           tags:
-                - { name: kernel.event_listener}`
+```
+  TdsProviderBundle\EventSubscriber\LandingPageCookieSetterSubscriber:
+           tags: [ { name: kernel.event_listener} ]
+```
