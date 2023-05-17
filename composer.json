@@ -1,5 +1,5 @@
 {
-    "name": "common-bundles/tds-provider-bundle",
+    "name": "firelink-media/tds-provider-bundle",
     "type": "symfony-bundle",
     "minimum-stability": "stable",
     "authors": [
