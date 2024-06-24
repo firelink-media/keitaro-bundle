@@ -6,6 +6,7 @@ use TdsProviderBundle\Utils\SlackUtils;
 use TdsProviderBundle\Utils\KClickClient;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
+use TdsProviderBundle\Utils\UrlUtils;
 
 class TdsProvider
 {
@@ -64,11 +65,16 @@ class TdsProvider
         $this->client->sendAllParams();
         $this->client->currentPageAsReferrer();
 
+        $cookieLandingPage = $request->cookies->get('landing_page', '');
         $this->client->param('site', $this->tdsHost);
         $this->client->param('sub_id_1', $type);
         $this->client->param('sub_id_2', $request->cookies->get('_ga', ''));
         $this->client->param('sub_id_3', $request->cookies->get('ref', ''));
         $this->client->param('sub_id_4', $request->cookies->get('landing_page', ''));
+        $this->client->param(
+            'sub_id_5',
+            $cookieLandingPage ? UrlUtils::getUrlPathFromUrl($cookieLandingPage) : $cookieLandingPage
+        );
 
         $this->client->keyword($keyword);
 
