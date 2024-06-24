@@ -75,6 +75,7 @@ class TdsProvider
             'sub_id_5',
             $cookieLandingPage ? UrlUtils::getUrlPathFromUrl($cookieLandingPage) : $cookieLandingPage
         );
+        $this->client->param('sub_id_6', $request->cookies->get('reflink_click_timestamp', ''));
 
         $this->client->keyword($keyword);
 
